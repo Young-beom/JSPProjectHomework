@@ -21,8 +21,8 @@ public class MainAction extends JPanel {
 
 	private void panelInit(JFrame frame) {
 		// 메인 화면 패널
-		this.setBackground(new Color(255, 255, 255));
-		this.setBounds(0, 0, 1000, 600);
+//		this.setBackground(new Color(255, 255, 255));
+		this.setBounds(0, 0, 1280, 960);
 		
 		frame.getContentPane().add(this);
 		this.setLayout(null);
@@ -30,10 +30,14 @@ public class MainAction extends JPanel {
 		// 메인 화면 라벨
 		JLabel tilteLabel = new JLabel("Drim Olympic");
 		tilteLabel.setFont(new Font("Arial", Font.BOLD, 35));
-		tilteLabel.setForeground(new Color(0, 35, 110));
+		
+		tilteLabel.setForeground(Color.white);
+		tilteLabel.setBackground(new Color(51, 63, 80));
+		
+		tilteLabel.setOpaque(true);
+		
 		tilteLabel.setHorizontalAlignment(JLabel.CENTER);
-		tilteLabel.setBounds(70, 4, 850, 40);
-		tilteLabel.setBackground(new Color(0, 0, 0));
+		tilteLabel.setBounds(0, 50, 1280, 60);
 		this.add(tilteLabel);
 
 	}

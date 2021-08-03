@@ -12,10 +12,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 public class MainScreen {
-	static JMenuBar mb;
-	static JMenu x;
-	static JMenuItem m1, m2, m3;
-	
 	private JFrame frame;
 	private MainAction mainAction;
 	
@@ -27,7 +23,7 @@ public class MainScreen {
 	//Main Frame Å©±â
 	private void frameInit() {
 		frame.setTitle("Drim Olympic");
-		frame.setBounds(100, 100, 1000, 600);
+		frame.setBounds(100, 100, 1280, 960);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 	}
