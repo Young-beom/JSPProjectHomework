@@ -39,6 +39,18 @@ public class MainAction extends JPanel {
 		tilteLabel.setHorizontalAlignment(JLabel.CENTER);
 		tilteLabel.setBounds(0, 50, 1280, 60);
 		this.add(tilteLabel);
+		
+		JLabel underLabel = new JLabel("㈜ 드림시스  ⓒ 명지대 인턴 프로젝트");
+		underLabel.setFont(new Font("맑은고딕",Font.PLAIN,13));
+		
+		underLabel.setForeground(Color.black);
+		underLabel.setBackground(new Color(204,204,204));
+		
+		underLabel.setOpaque(true);
+		
+		underLabel.setHorizontalAlignment(JLabel.CENTER);
+		underLabel.setBounds(0, 882, 1280, 40);
+		this.add(underLabel);
 
 	}
 }
