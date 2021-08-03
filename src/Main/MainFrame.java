@@ -8,9 +8,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 
 public class MainFrame {
 	private JFrame frame;
@@ -33,19 +30,31 @@ public class MainFrame {
 		JLabel tilteLabel = new JLabel("Drim Olympic");
 		tilteLabel.setBounds(0, 50, 1280, 60);
 		
-		// Font
-		tilteLabel.setFont(new Font("Arial", Font.BOLD, 35));
+		tilteLabel.setFont(new Font("Arial", Font.BOLD, 35));  // Font
 		
-		// Color
-		tilteLabel.setForeground(Color.white);
+		tilteLabel.setForeground(Color.white);  // Color
 		tilteLabel.setBackground(new Color(51, 63, 80));
-		
+		 
 		tilteLabel.setOpaque(true);
 		
-		//Position
-		tilteLabel.setHorizontalAlignment(JLabel.CENTER);
+		
+		tilteLabel.setHorizontalAlignment(JLabel.CENTER); //Position
 		
 		frame.add(tilteLabel);
+		
+		
+		// Footer
+		JLabel underLabel = new JLabel("㈜ 드림시스  ⓒ 명지대 인턴 프로젝트");
+		underLabel.setFont(new Font("맑은고딕",Font.PLAIN,13));
+		
+		underLabel.setForeground(Color.black);
+		underLabel.setBackground(new Color(204,204,204));
+		
+		underLabel.setOpaque(true);
+		
+		underLabel.setHorizontalAlignment(JLabel.CENTER);
+		underLabel.setBounds(0, 803, 1280, 40);
+		frame.add(underLabel);
 	}
 
 	private void Initialize() {

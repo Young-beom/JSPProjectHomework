@@ -24,6 +24,5 @@ public class MainAction extends JPanel {
 		frame.getContentPane().add(this);
 		this.setLayout(null);
 
-
 	}
 }
