@@ -1,3 +1,4 @@
+// 메인페이지 - 하연
 package Main;
 
 import java.awt.Color;

@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -42,6 +43,27 @@ public class MainFrame {
 		
 		frame.add(tilteLabel);
 		
+		// Header
+		JButton homebtn = new JButton("Home");
+		homebtn.setFont(new Font("고딕", Font.BOLD, 14));
+		homebtn.setBackground(new Color(217, 217, 217));
+		homebtn.setBounds(10, 20, 75, 23);
+		frame.add(homebtn);
+		
+		JButton loginbtn = new JButton("로그인");
+		loginbtn.setFont(new Font("고딕", Font.BOLD, 13));
+		loginbtn.setBackground(new Color(217, 217, 217));
+		loginbtn.setBounds(1180, 20, 75, 23);
+		frame.add(loginbtn);
+		
+		/*
+		homebtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//버튼 눌렀을 때 넣을 효과 쓰기.
+			}
+		});
+		*/
+		
 		
 		// Footer
 		JLabel underLabel = new JLabel("㈜ 드림시스  ⓒ 명지대 인턴 프로젝트");
@@ -70,6 +92,8 @@ public class MainFrame {
 					MainFrame window = new MainFrame();
 					
 					window.frame.setVisible(true);
+					window.frame.setResizable(false);
+					window.frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
