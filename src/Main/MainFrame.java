@@ -82,7 +82,7 @@ public class MainFrame {
 		underLabel.setOpaque(true);
 
 		underLabel.setHorizontalAlignment(JLabel.CENTER);
-		underLabel.setBounds(0, 803, 1280, 40);
+		underLabel.setBounds(0, 880, 1280, 40);
 
 		frame.add(underLabel);
 
