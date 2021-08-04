@@ -30,12 +30,12 @@ public class MainAction extends JPanel {
 	}
 
 
-	private void panelInit() {
+	private void panelInit(JFrame frame) {
 		// 메인 화면 패널
 		this.setBackground(new Color(255, 255, 255));
 		this.setBounds(0, 0, 1280, 960);
 		
-		this.getContentPane().add(this);
+		frame.getContentPane().add(this);
 		
 		this.setLayout(null);
 		
@@ -47,6 +47,8 @@ public class MainAction extends JPanel {
 		tilteLabel.setBackground(new Color(51, 63, 80));
 		tilteLabel.setPreferredSize(new Dimension(200,80)); //width가 안먹는듯
 		tilteLabel.setOpaque(true);
+
+
 		
 		//mainPanel.add(tilteLabel);
 		this.add(tilteLabel);
