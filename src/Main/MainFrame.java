@@ -14,6 +14,8 @@ import Cheering.CheerPanel;
 import GameInf.GameInfPanel;
 import Player.PlayerPanel;
 import RankCompare.RankComparePanel;
+import login.loginFrame;
+import login.loginPanel;
 
 public class MainFrame {
 	private JFrame frame;
@@ -24,6 +26,8 @@ public class MainFrame {
 	private GameInfPanel gameInfPanel;
 	private PlayerPanel playerPanel;
 	private RankComparePanel rankComparePanel;
+	private loginPanel loginPanel;
+	private loginFrame loginFrame;
 
 	public MainFrame() {
 		frame = new JFrame();
@@ -64,13 +68,25 @@ public class MainFrame {
 		loginbtn.setBounds(1180, 20, 75, 23);
 		frame.add(loginbtn);
 		
-		/*
-		homebtn.addActionListener(new ActionListener() {
+		loginbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//버튼 눌렀을 때 넣을 효과 쓰기.
+
+				player_Btn.setVisible(false);
+				cheering_Btn.setVisible(false);
+				gameInf_Btn.setVisible(false);
+				rank_Btn.setVisible(false);
+				
+				//패널
+				loginPanel.setVisible(true);
+				mainAction.setVisible(false);
+				cheerPanel.setVisible(false);
+				gameInfPanel.setVisible(false);
+				playerPanel.setVisible(false);
+				rankComparePanel.setVisible(false);
+				
+				loginbtn.setVisible(false);
 			}
 		});
-		*/
 		
 		// Footer
 		JLabel underLabel = new JLabel("㈜ 드림시스  ⓒ 명지대 인턴 프로젝트");
@@ -100,7 +116,7 @@ public class MainFrame {
 				gameInfPanel.setVisible(false);
 				playerPanel.setVisible(false);
 				rankComparePanel.setVisible(false);
-				
+				loginPanel.setVisible(false);
 			}
 		});
 		player_Btn.setBounds(200, 130, 150, 45);
@@ -115,6 +131,7 @@ public class MainFrame {
 				gameInfPanel.setVisible(true);
 				playerPanel.setVisible(false);
 				rankComparePanel.setVisible(false);
+				loginPanel.setVisible(false);
 			}
 		});
 		cheering_Btn.setBounds(450, 130, 150, 45);
@@ -129,6 +146,7 @@ public class MainFrame {
 				gameInfPanel.setVisible(false);
 				playerPanel.setVisible(true);
 				rankComparePanel.setVisible(false);
+				loginPanel.setVisible(false);
 			}
 		});
 		gameInf_Btn.setBounds(700, 130, 150, 45);
@@ -143,6 +161,7 @@ public class MainFrame {
 				gameInfPanel.setVisible(false);
 				playerPanel.setVisible(false);
 				rankComparePanel.setVisible(true);
+				loginPanel.setVisible(false);
 			}
 		});
 		rank_Btn.setBounds(950, 130, 150, 45);
@@ -152,6 +171,8 @@ public class MainFrame {
 	private void Initialize() {
 		frameInit();
 		mainAction = new MainAction(frame);
+		loginPanel = new loginPanel(frame);
+		loginFrame = new loginFrame(frame);
 		cheerPanel = new CheerPanel(frame);
 		gameInfPanel =  new GameInfPanel(frame);
 		playerPanel = new PlayerPanel(frame);
