@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import Cheering.CheerPanel;
-import GameInf.GameInfPanel;
+import GameInf.GameInfFrame;
 import Player.PlayerFrame;
 import RankCompare.RankComparePanel;
 
@@ -21,7 +21,7 @@ public class MainFrame {
 
 	private MainAction mainAction;
 	private CheerPanel cheerPanel;
-	private GameInfPanel gameInfPanel;
+	private GameInfFrame gameInfPanel;
 	private PlayerFrame playerPanel;
 	private RankComparePanel rankComparePanel;
 
@@ -165,7 +165,7 @@ public class MainFrame {
 		
 		mainAction = new MainAction(frame);
 		cheerPanel = new CheerPanel(frame);
-		gameInfPanel =  new GameInfPanel(frame);
+		gameInfPanel =  new GameInfFrame(frame);
 		playerPanel = new PlayerFrame(frame);
 		rankComparePanel = new RankComparePanel(frame);
 	}
