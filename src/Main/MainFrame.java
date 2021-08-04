@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 
 import Cheering.CheerPanel;
 import GameInf.GameInfPanel;
-import Player.PlayerPanel;
+import Player.PlayerFrame;
 import RankCompare.RankComparePanel;
 
 public class MainFrame {
@@ -22,7 +22,7 @@ public class MainFrame {
 	private MainAction mainAction;
 	private CheerPanel cheerPanel;
 	private GameInfPanel gameInfPanel;
-	private PlayerPanel playerPanel;
+	private PlayerFrame playerPanel;
 	private RankComparePanel rankComparePanel;
 
 	public MainFrame() {
@@ -53,10 +53,21 @@ public class MainFrame {
 		
 		// Header
 		JButton homebtn = new JButton("Home");
+		homebtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mainAction.setVisible(true);
+				cheerPanel.setVisible(false);
+				gameInfPanel.setVisible(false);
+				playerPanel.setVisible(false);
+				rankComparePanel.setVisible(false);
+			}
+		});
+		
 		homebtn.setFont(new Font("°íµñ", Font.BOLD, 14));
 		homebtn.setBackground(new Color(217, 217, 217));
 		homebtn.setBounds(10, 20, 75, 23);
 		frame.add(homebtn);
+		
 		
 		JButton loginbtn = new JButton("·Î±×ÀÎ");
 		loginbtn.setFont(new Font("°íµñ", Font.BOLD, 13));
@@ -96,9 +107,9 @@ public class MainFrame {
 		player_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mainAction.setVisible(false);
-				cheerPanel.setVisible(true);
-				gameInfPanel.setVisible(false);
-				playerPanel.setVisible(false);
+				playerPanel.setVisible(true);
+				cheerPanel.setVisible(false);
+				gameInfPanel.setVisible(false);				
 				rankComparePanel.setVisible(false);
 				
 			}
@@ -111,9 +122,9 @@ public class MainFrame {
 		cheering_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mainAction.setVisible(false);
-				cheerPanel.setVisible(false);
-				gameInfPanel.setVisible(true);
 				playerPanel.setVisible(false);
+				cheerPanel.setVisible(true);
+				gameInfPanel.setVisible(false);				
 				rankComparePanel.setVisible(false);
 			}
 		});
@@ -125,9 +136,9 @@ public class MainFrame {
 		gameInf_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mainAction.setVisible(false);
+				playerPanel.setVisible(false);
 				cheerPanel.setVisible(false);
-				gameInfPanel.setVisible(false);
-				playerPanel.setVisible(true);
+				gameInfPanel.setVisible(true);
 				rankComparePanel.setVisible(false);
 			}
 		});
@@ -139,9 +150,9 @@ public class MainFrame {
 		rank_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mainAction.setVisible(false);
-				cheerPanel.setVisible(false);
-				gameInfPanel.setVisible(false);
 				playerPanel.setVisible(false);
+				cheerPanel.setVisible(false);
+				gameInfPanel.setVisible(false);				
 				rankComparePanel.setVisible(true);
 			}
 		});
@@ -151,10 +162,11 @@ public class MainFrame {
 
 	private void Initialize() {
 		frameInit();
+		
 		mainAction = new MainAction(frame);
 		cheerPanel = new CheerPanel(frame);
 		gameInfPanel =  new GameInfPanel(frame);
-		playerPanel = new PlayerPanel(frame);
+		playerPanel = new PlayerFrame(frame);
 		rankComparePanel = new RankComparePanel(frame);
 	}
 
@@ -165,7 +177,7 @@ public class MainFrame {
 					MainFrame window = new MainFrame();
 
 					window.frame.setVisible(true);
-					window.frame.setResizable(false);
+//					window.frame.setResizable(false);
 					window.frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -174,4 +186,3 @@ public class MainFrame {
 		});
 	}
 }
-//¹ÎÁö
