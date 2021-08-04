@@ -2,13 +2,19 @@ package GameInf;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class GameInfPanel extends JPanel {
-
+	BufferedImage img1, img2, img3;
+	
+	
 	public GameInfPanel(JFrame frame) {
 		super();
 		PanelInit(frame);
@@ -34,6 +40,7 @@ public class GameInfPanel extends JPanel {
 
 		this.add(tilteLabel);
 		
+		
 		// Medal Title
 		JLabel tilteLabel1 = new JLabel("DropBox");
 		tilteLabel1.setBounds(550, 35, 500, 40); 
@@ -47,6 +54,7 @@ public class GameInfPanel extends JPanel {
 		tilteLabel1.setHorizontalAlignment(JLabel.CENTER); // Position
 
 		this.add(tilteLabel1);
+		
 		
 		// Medal Title
 		JLabel tilteLabel2 = new JLabel("하이라이트 검색창");
@@ -76,7 +84,18 @@ public class GameInfPanel extends JPanel {
 
 		MedalImage.setHorizontalAlignment(JLabel.CENTER); // Position
 
+		
+		try {
+			img1 = ImageIO.read(new File("image/image1.png"));
+		}catch(IOException e) {
+		}
+		
+		
 		this.add(MedalImage);
+		
+		
+		
+		
 		
 		// Medal Picture
 		JLabel planImage = new JLabel("사진 예정2");
