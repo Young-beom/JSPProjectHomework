@@ -39,6 +39,21 @@ public class MainAction extends JPanel {
 		
 		this.setLayout(null);
 		
+		JLabel tilteLabel = new JLabel("");
+
+		tilteLabel.setFont(new Font("고딕", Font.BOLD, 20)); // Font
+
+		tilteLabel.setForeground(Color.white); // Color
+		tilteLabel.setBackground(new Color(51, 63, 80));
+		tilteLabel.setPreferredSize(new Dimension(200,80)); //width가 안먹는듯
+		tilteLabel.setOpaque(true);
+
+
+		
+		//mainPanel.add(tilteLabel);
+		this.add(tilteLabel);
+			
+		
 		// JPanel 부분 시작  -> 이부분 나중에 쓸 수 도 있으니 삭제하지 말아주세용가링.
 	    String [] fruits = {"apple", "banana", "mango"};
 	    
@@ -59,21 +74,14 @@ public class MainAction extends JPanel {
         Box tableBox = Box.createHorizontalBox();
         Box underBox = Box.createVerticalBox();
         
-        JLabel tilteLabel = new JLabel("제목테스트");
-
-		tilteLabel.setFont(new Font("고딕", Font.BOLD, 20)); // Font
-
-		tilteLabel.setForeground(Color.white); // Color
-		tilteLabel.setBackground(new Color(51, 63, 80));
-		tilteLabel.setPreferredSize(new Dimension(200,80)); //width가 안먹는듯
-		tilteLabel.setOpaque(true);
 		
+		// 종목 입력
+		String eventList[] = { "축구", "야구", "배구" };
 
-		tilteLabel.setHorizontalAlignment(JLabel.CENTER); // Position
+		JComboBox eventBox = new JComboBox<Object>(eventList);
+		eventBox.setBounds(515, 170, 235, 40);
 
-		//mainPanel.add(tilteLabel);
-		searchBox.add(tilteLabel);
-		
+		searchBox.add(eventBox);
 		// 테이블 가로(좌측)
 		JButton writebtn1 = new JButton("1");
 		writebtn1.setFont(new Font("맑은고딕", Font.BOLD, 13));

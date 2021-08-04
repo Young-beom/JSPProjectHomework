@@ -13,6 +13,10 @@ import javax.swing.border.LineBorder;
 
 import Cheering.CheerPanel;
 import GameInf.GameInfFrame;
+<<<<<<< HEAD
+=======
+import GameInf.GameInfPanel;
+>>>>>>> b65822af9f25882d4db3106e486eacca6507ac34
 import Player.PlayerFrame;
 import RankCompare.RankComparePanel;
 import login.loginFrame;
@@ -52,36 +56,35 @@ public class MainFrame {
 
       tilteLabel.setHorizontalAlignment(JLabel.CENTER); // Position
 
-      frame.add(tilteLabel);
-      
-      // Header
-      JButton homebtn = new JButton("Home");
-      homebtn.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-            mainAction.setVisible(true);
-            cheerPanel.setVisible(false);
-            gameInfPanel.setVisible(false);
-            playerPanel.setVisible(false);
-            rankComparePanel.setVisible(false);
-            player_Btn.setBorderPainted(false);
-            player_Btn.setFocusPainted(false);
-            cheering_Btn.setBorderPainted(false);
-            cheering_Btn.setFocusPainted(false);
-            gameInf_Btn.setBorderPainted(false);
-            gameInf_Btn.setFocusPainted(false);
-            rank_Btn.setBorderPainted(false);
-            rank_Btn.setFocusPainted(false);
-         }
-      });
-      
-      homebtn.setFont(new Font("고딕", Font.BOLD, 14));
-      homebtn.setBackground(new Color(217, 217, 217));
-      homebtn.setBounds(10, 20, 75, 23);
-      homebtn.setBorderPainted(false);
-      homebtn.setFocusPainted(false);
-      frame.add(homebtn);
-      
-
+		frame.add(tilteLabel);
+		
+		// Header
+		JButton homebtn = new JButton("Home");
+		homebtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mainAction.setVisible(true);
+				cheerPanel.setVisible(false);
+				gameInfPanel.setVisible(false);
+				playerPanel.setVisible(false);
+				rankComparePanel.setVisible(false);
+				player_Btn.setBorderPainted(false);
+				player_Btn.setFocusPainted(false);
+				cheering_Btn.setBorderPainted(false);
+				cheering_Btn.setFocusPainted(false);
+				gameInf_Btn.setBorderPainted(false);
+				gameInf_Btn.setFocusPainted(false);
+				rank_Btn.setBorderPainted(false);
+				rank_Btn.setFocusPainted(false);
+			}
+		});
+		
+		homebtn.setFont(new Font("고딕", Font.BOLD, 14));
+		homebtn.setBackground(new Color(217, 217, 217));
+		homebtn.setBounds(10, 20, 75, 23);
+		homebtn.setBorderPainted(false);
+		homebtn.setFocusPainted(false);
+		frame.add(homebtn);
+	
       
       
       homebtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -210,6 +213,7 @@ public class MainFrame {
       player_Btn.setBorderPainted(false);
       player_Btn.setFocusPainted(false);
       frame.add(player_Btn);
+
 
       // 응원게시판 이동
       cheering_Btn = new JButton("응원게시판");
