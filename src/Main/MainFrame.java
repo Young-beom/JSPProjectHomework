@@ -165,7 +165,7 @@ public class MainFrame {
 					MainFrame window = new MainFrame();
 
 					window.frame.setVisible(true);
-					window.frame.setResizable(false);
+//					window.frame.setResizable(false);
 					window.frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -174,4 +174,3 @@ public class MainFrame {
 		});
 	}
 }
-//¹ÎÁö
