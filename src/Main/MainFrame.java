@@ -63,6 +63,14 @@ public class MainFrame {
 				gameInfPanel.setVisible(false);
 				playerPanel.setVisible(false);
 				rankComparePanel.setVisible(false);
+				player_Btn.setBorderPainted(false);
+				player_Btn.setFocusPainted(false);
+				cheering_Btn.setBorderPainted(false);
+				cheering_Btn.setFocusPainted(false);
+				gameInf_Btn.setBorderPainted(false);
+				gameInf_Btn.setFocusPainted(false);
+				rank_Btn.setBorderPainted(false);
+				rank_Btn.setFocusPainted(false);
 			}
 		});
 		
@@ -161,6 +169,12 @@ public class MainFrame {
 				playerPanel.setVisible(true);
 				rankComparePanel.setVisible(false);
 				player_Btn.setBorderPainted(true);
+				cheering_Btn.setBorderPainted(false);
+				cheering_Btn.setFocusPainted(false);
+				gameInf_Btn.setBorderPainted(false);
+				gameInf_Btn.setFocusPainted(false);
+				rank_Btn.setBorderPainted(false);
+				rank_Btn.setFocusPainted(false);
 			}
 		});
 		
@@ -190,6 +204,12 @@ public class MainFrame {
 				gameInfPanel.setVisible(false);				
 				rankComparePanel.setVisible(false);
 				cheering_Btn.setBorderPainted(true);
+				player_Btn.setBorderPainted(false);
+				player_Btn.setFocusPainted(false);
+				gameInf_Btn.setBorderPainted(false);
+				gameInf_Btn.setFocusPainted(false);
+				rank_Btn.setBorderPainted(false);
+				rank_Btn.setFocusPainted(false);
 				
 			}
 		});
@@ -219,6 +239,12 @@ public class MainFrame {
 				gameInfPanel.setVisible(true);
 				rankComparePanel.setVisible(false);
 				gameInf_Btn.setBorderPainted(true);
+				player_Btn.setBorderPainted(false);
+				player_Btn.setFocusPainted(false);
+				cheering_Btn.setBorderPainted(false);
+				cheering_Btn.setFocusPainted(false);
+				rank_Btn.setBorderPainted(false);
+				rank_Btn.setFocusPainted(false);
 			}
 		});
 		gameInf_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -247,6 +273,12 @@ public class MainFrame {
 				gameInfPanel.setVisible(false);				
 				rankComparePanel.setVisible(true);
 				rank_Btn.setBorderPainted(true);
+				player_Btn.setBorderPainted(false);
+				player_Btn.setFocusPainted(false);
+				cheering_Btn.setBorderPainted(false);
+				cheering_Btn.setFocusPainted(false);
+				gameInf_Btn.setBorderPainted(false);
+				gameInf_Btn.setFocusPainted(false);
 			}
 		});
 		rank_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
