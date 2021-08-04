@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.border.LineBorder;
 
 import Cheering.CheerPanel;
-import GameInf.GameInfPanel;
+import GameInf.GameInfFrame;
 import Player.PlayerFrame;
 import RankCompare.RankComparePanel;
 import login.loginFrame;
@@ -23,7 +23,7 @@ public class MainFrame {
 
    private MainAction mainAction;
    private CheerPanel cheerPanel;
-   private GameInfPanel gameInfPanel;
+   private GameInfFrame gameInfPanel;
    private PlayerFrame playerPanel;
    private RankComparePanel rankComparePanel;
    private loginFrame loginPanel;
@@ -322,7 +322,7 @@ public class MainFrame {
       
       mainAction = new MainAction(frame);
       cheerPanel = new CheerPanel(frame);
-      gameInfPanel =  new GameInfPanel(frame);
+      gameInfPanel =  new GameInfFrame(frame);
       playerPanel = new PlayerFrame(frame);
       rankComparePanel = new RankComparePanel(frame);
       loginPanel = new loginFrame(frame);
