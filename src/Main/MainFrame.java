@@ -6,9 +6,12 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.UIManager;
+import javax.swing.border.LineBorder;
 
 import Cheering.CheerPanel;
 import GameInf.GameInfFrame;
@@ -66,15 +69,60 @@ public class MainFrame {
 		homebtn.setFont(new Font("고딕", Font.BOLD, 14));
 		homebtn.setBackground(new Color(217, 217, 217));
 		homebtn.setBounds(10, 20, 75, 23);
+		homebtn.setBorderPainted(false);
+		homebtn.setFocusPainted(false);
 		frame.add(homebtn);
 		
+
+		homebtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mainAction.setVisible(true);
+				cheerPanel.setVisible(false);
+				gameInfPanel.setVisible(false);
+				playerPanel.setVisible(false);
+				rankComparePanel.setVisible(false);
+			}
+		});
+		
+		homebtn.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				homebtn.setBackground(new Color(255, 240, 240));
+				//player_Btn.setBorderPainted(true);
+			}
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				homebtn.setBackground(new Color(217, 217, 217));
+			}
+		});
+		
+
 		
 		JButton loginbtn = new JButton("로그인");
-		loginbtn.setFont(new Font("고딕", Font.BOLD, 13));
+		loginbtn.setFont(new Font("맑은고딕", Font.BOLD, 13));
 		loginbtn.setBackground(new Color(217, 217, 217));
 		loginbtn.setBounds(1180, 20, 75, 23);
+		loginbtn.setBorderPainted(false);
+		loginbtn.setFocusPainted(false);
 		frame.add(loginbtn);
 		
+		loginbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mainAction.setVisible(true);
+				cheerPanel.setVisible(false);
+				gameInfPanel.setVisible(false);
+				playerPanel.setVisible(false);
+				rankComparePanel.setVisible(false);
+			}
+		});
+		
+		loginbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				loginbtn.setBackground(new Color(255, 240, 240));
+				//player_Btn.setBorderPainted(true);
+			}
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				loginbtn.setBackground(new Color(217, 217, 217));
+			}
+		});
 		/*
 		homebtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -103,18 +151,33 @@ public class MainFrame {
 	// Menu Add
 	private void menuButton() {
 		// 선수소개 이동
+		LineBorder black_hover = new LineBorder(Color.RED);
 		player_Btn = new JButton("선수소개");
 		player_Btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mainAction.setVisible(false);
-				playerPanel.setVisible(true);
 				cheerPanel.setVisible(false);
-				gameInfPanel.setVisible(false);				
+				gameInfPanel.setVisible(false);
+				playerPanel.setVisible(true);
 				rankComparePanel.setVisible(false);
-				
+				player_Btn.setBorderPainted(true);
 			}
 		});
-		player_Btn.setBounds(200, 130, 150, 45);
+		
+		player_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				player_Btn.setBackground(new Color(255, 240, 240));
+				//player_Btn.setBorderPainted(true);
+			}
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				player_Btn.setBackground(new Color(231, 230, 230));
+			}
+		});
+		player_Btn.setFont(new Font("고딕", Font.BOLD, 20));
+		player_Btn.setBackground(new Color(231, 230, 230));
+		player_Btn.setBounds(190, 130, 150, 45);
+		player_Btn.setBorderPainted(false);
+		player_Btn.setFocusPainted(false);
 		frame.add(player_Btn);
 
 		// 응원게시판 이동
@@ -126,9 +189,24 @@ public class MainFrame {
 				cheerPanel.setVisible(true);
 				gameInfPanel.setVisible(false);				
 				rankComparePanel.setVisible(false);
+				cheering_Btn.setBorderPainted(true);
+				
 			}
 		});
-		cheering_Btn.setBounds(450, 130, 150, 45);
+		cheering_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				cheering_Btn.setBackground(new Color(255, 240, 240));
+				//player_Btn.setBorderPainted(true);
+			}
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				cheering_Btn.setBackground(new Color(231, 230, 230));
+			}
+		});
+		cheering_Btn.setFont(new Font("고딕", Font.BOLD, 20));
+		cheering_Btn.setBackground(new Color(231, 230, 230));
+		cheering_Btn.setBorderPainted(false);
+		cheering_Btn.setFocusPainted(false);
+		cheering_Btn.setBounds(440, 130, 150, 45);
 		frame.add(cheering_Btn);
 
 		// 실시간 경기정보 이동
@@ -140,9 +218,23 @@ public class MainFrame {
 				cheerPanel.setVisible(false);
 				gameInfPanel.setVisible(true);
 				rankComparePanel.setVisible(false);
+				gameInf_Btn.setBorderPainted(true);
 			}
 		});
-		gameInf_Btn.setBounds(700, 130, 150, 45);
+		gameInf_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				gameInf_Btn.setBackground(new Color(255, 240, 240));
+				//player_Btn.setBorderPainted(true);
+			}
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				gameInf_Btn.setBackground(new Color(231, 230, 230));
+			}
+		});
+		gameInf_Btn.setFont(new Font("고딕", Font.BOLD, 20));
+		gameInf_Btn.setBackground(new Color(231, 230, 230));
+		gameInf_Btn.setBorderPainted(false);
+		gameInf_Btn.setFocusPainted(false);
+		gameInf_Btn.setBounds(690, 130, 190, 45);
 		frame.add(gameInf_Btn);
 		
 		// 랭킹 비교 이동
@@ -154,9 +246,23 @@ public class MainFrame {
 				cheerPanel.setVisible(false);
 				gameInfPanel.setVisible(false);				
 				rankComparePanel.setVisible(true);
+				rank_Btn.setBorderPainted(true);
 			}
 		});
-		rank_Btn.setBounds(950, 130, 150, 45);
+		rank_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
+			public void mouseEntered(java.awt.event.MouseEvent evt) {
+				rank_Btn.setBackground(new Color(255, 240, 240));
+				//player_Btn.setBorderPainted(true);
+			}
+			public void mouseExited(java.awt.event.MouseEvent evt) {
+				rank_Btn.setBackground(new Color(231, 230, 230));
+			}
+		});
+		rank_Btn.setFont(new Font("고딕", Font.BOLD, 20));
+		rank_Btn.setBackground(new Color(231, 230, 230));
+		rank_Btn.setBorderPainted(false);
+		rank_Btn.setFocusPainted(false);
+		rank_Btn.setBounds(940, 130, 170, 45);
 		frame.add(rank_Btn);
 	}
 
