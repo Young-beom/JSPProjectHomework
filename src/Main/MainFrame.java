@@ -28,6 +28,7 @@ public class MainFrame {
    private PlayerFrame playerPanel;
    private RankComparePanel rankComparePanel;
    private loginFrame loginPanel;
+   private BoardFrame1 boardframe1;
 
    public MainFrame() {
       frame = new JFrame();
@@ -56,38 +57,9 @@ public class MainFrame {
 
       tilteLabel.setHorizontalAlignment(JLabel.CENTER); // Position
 
-		frame.add(tilteLabel);
-		
-		// Header
-		JButton homebtn = new JButton("Home");
-		homebtn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				mainAction.setVisible(true);
-				cheerPanel.setVisible(false);
-				gameInfPanel.setVisible(false);
-				playerPanel.setVisible(false);
-				rankComparePanel.setVisible(false);
-				player_Btn.setBorderPainted(false);
-				player_Btn.setFocusPainted(false);
-				cheering_Btn.setBorderPainted(false);
-				cheering_Btn.setFocusPainted(false);
-				gameInf_Btn.setBorderPainted(false);
-				gameInf_Btn.setFocusPainted(false);
-				rank_Btn.setBorderPainted(false);
-				rank_Btn.setFocusPainted(false);
-			}
-		});
-		
-		homebtn.setFont(new Font("고딕", Font.BOLD, 14));
-		homebtn.setBackground(new Color(217, 217, 217));
-		homebtn.setBounds(10, 20, 75, 23);
-		homebtn.setBorderPainted(false);
-		homebtn.setFocusPainted(false);
-		frame.add(homebtn);
-	
+      frame.add(tilteLabel);
       
-      
-      
+      // Header
       
       JButton loginbtn = new JButton("로그인");
       loginbtn.setFont(new Font("맑은고딕", Font.BOLD, 13));
@@ -97,7 +69,41 @@ public class MainFrame {
       loginbtn.setFocusPainted(false);
       frame.add(loginbtn);
       
-    //home버튼 눌렀을때 MainAction
+      
+      JButton homebtn = new JButton("Home");
+      homebtn.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {
+            mainAction.setVisible(true);
+            cheerPanel.setVisible(false);
+            gameInfPanel.setVisible(false);
+            playerPanel.setVisible(false);
+            rankComparePanel.setVisible(false);
+            player_Btn.setBorderPainted(false);
+            player_Btn.setFocusPainted(false);
+            cheering_Btn.setBorderPainted(false);
+            cheering_Btn.setFocusPainted(false);
+            gameInf_Btn.setBorderPainted(false);
+            gameInf_Btn.setFocusPainted(false);
+            rank_Btn.setBorderPainted(false);
+            rank_Btn.setFocusPainted(false);
+            
+            player_Btn.setVisible(true);
+            cheering_Btn.setVisible(true);
+            gameInf_Btn.setVisible(true);
+            rank_Btn.setVisible(true);
+            loginbtn.setVisible(true);
+         }
+      });
+      
+      homebtn.setFont(new Font("고딕", Font.BOLD, 14));
+      homebtn.setBackground(new Color(217, 217, 217));
+      homebtn.setBounds(10, 20, 75, 23);
+      homebtn.setBorderPainted(false);
+      homebtn.setFocusPainted(false);
+      frame.add(homebtn);
+   
+      
+      //home버튼 눌렀을때 MainAction
       homebtn.addMouseListener(new java.awt.event.MouseAdapter() {
           public void mouseEntered(java.awt.event.MouseEvent evt) {
              homebtn.setBackground(new Color(255, 240, 240));
@@ -108,25 +114,9 @@ public class MainFrame {
           }
        });
       
-      homebtn.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent e) {
-             mainAction.setVisible(true);
-             cheerPanel.setVisible(false);
-             gameInfPanel.setVisible(false);
-             playerPanel.setVisible(false);
-             rankComparePanel.setVisible(false);
-             loginPanel.setVisible(false);
-             
-             player_Btn.setVisible(true);
-             cheering_Btn.setVisible(true);
-             gameInf_Btn.setVisible(true);
-             rank_Btn.setVisible(true);
-             
-             loginbtn.setVisible(true);
-          }
-       });
+  
       
-    //login버튼 눌렀을때 loginPanel
+      //login버튼 눌렀을때 loginPanel
       loginbtn.addMouseListener(new java.awt.event.MouseAdapter() {
          public void mouseEntered(java.awt.event.MouseEvent evt) {
             loginbtn.setBackground(new Color(255, 240, 240));
@@ -154,7 +144,9 @@ public class MainFrame {
              loginbtn.setVisible(false);
           }
        });
-           
+      ///////////////////////////////////////////// 
+      
+      
       // Footer
       JLabel underLabel = new JLabel("㈜ 드림시스  ⓒ 명지대 인턴 프로젝트");
       underLabel.setFont(new Font("맑은고딕", Font.PLAIN, 13));
